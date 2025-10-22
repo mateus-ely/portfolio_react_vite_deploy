@@ -9,28 +9,32 @@ import CurriculoComp from './containers/Curriculo/Curriculo'
 import PortifolioComp from './containers/Portfoleo/PortfolioPage'
 import ContactPageComp from './containers/Contato/ContactPage'
 
+
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomeComp />,
-  },
-  {
-    path: "Curriculo",
-    element: <CurriculoComp />,
-  },
-  {
-    path: "PortifolioPage",
-    element: <PortifolioComp />,
-  },
-  {
-    path: "ContactPage",
-    element: <ContactPageComp />,
-  },
-]);
+  {
+    path: "/",
+    element: <HomeComp />,
+  },
+  {
+    path: "Curriculo",
+    element: <CurriculoComp />,
+  },
+  {
+    path: "PortifolioPage",
+    element: <PortifolioComp />,
+  },
+  {
+    path: "ContactPage",
+    element: <ContactPageComp />,
+  },
+], {
+    // O nome do seu repositório é o prefixo da URL no GitHub Pages
+    basename: "/portfolio_react_vite_deploy" 
+});
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <MyGlobalStyles /> 
-    <RouterProvider router={router} />
-  </StrictMode>
+  <StrictMode>
+    <MyGlobalStyles /> 
+    <RouterProvider router={router} />
+  </StrictMode>
 );
