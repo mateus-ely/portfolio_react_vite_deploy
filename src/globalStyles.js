@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
-import bg from "./assets/backgrounds/backgroundv4.png";
+import bg from "./assets/backgrounds/backgroundA1.jpg";
 
 const myGlobalStyles = createGlobalStyle`
   /* A LINHA DO @IMPORT FOI REMOVIDA DAQUI */
   
   box-sizing: border-box;
-  color: rgb(76, 103, 99);
+  color: rgb(0, 0, 0);
   display: block;
   font-family: gt, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-feature-settings: "liga";
@@ -17,6 +17,7 @@ const myGlobalStyles = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   unicode-bidi: isolate;
   max-width: 768px;
+
   * {
     margin: 0;
     box-sizing: border-box; /* Movi para cá para aplicar em tudo */
@@ -27,6 +28,11 @@ const myGlobalStyles = createGlobalStyle`
     padding: 0;
     width: 100%;
     height: 100%;
+  }
+
+  html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   }
 
   body {

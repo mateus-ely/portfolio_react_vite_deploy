@@ -16,9 +16,8 @@ function About() {
 
   return (
     <>
-      <NavigationComp />
 
-      <AboutStyle>
+      <AboutStyle  id="about">
         {/* ===== PARTE SUPERIOR ===== */}
         <div className="about-top">
           <h1>ABOUT ME</h1>

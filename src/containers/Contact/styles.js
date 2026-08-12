@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContactStyle = styled.section`
     font-family: gt, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+   min-height: 1200px;
   /* ===== PARTE SUPERIOR ===== */
   .contact-top {
     text-align: center;

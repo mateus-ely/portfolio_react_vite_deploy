@@ -8,7 +8,7 @@ const urlLinkedin = 'https://www.linkedin.com/in/mateus-ely-chies-4a69a31b2'
 function Contact() {
   return (
     <>
-      <NavigationComp />
+      
       <ContactStyle>
         <div className="contact-top">
           <h1>CONTACT</h1>

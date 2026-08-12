@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { NavBarStyle } from './styles'
-import img01 from '../../assets/images/img01.png'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,36 +8,51 @@ function Navigation() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const closeNav = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <NavBarStyle className={isMenuOpen ? 'responsive' : ''}>
-      <div className="header__content">
-        <div className="header__logo-container">
-          <div className="header__logo-img-cont">
-            <img src={img01} className="header__logo-img" />
-          </div>
-          <span className="header__logo-sub">Mateus Ely Chies</span>
+      <div className="header__main">
+
+        <div className="header__name">
+          Mateus Ely Chies
         </div>
 
-        <div className="header__main">
-          <ul className="header__links">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/About">About</Link>
-            </li>
-            <li>
-              <Link to="/Projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
-          </ul>
+        <ul className="header__links">
+          <li>
+            <a href="#home" onClick={closeNav}>
+              Home
+            </a>
+          </li>
 
-          <div className="header__main-ham-menu-cont" onClick={openNav}>
-            &#9776;
-          </div>
+          <li>
+            <a href="#about" onClick={closeNav}>
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="#projects" onClick={closeNav}>
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" onClick={closeNav}>
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <div
+          className="header__main-ham-menu-cont"
+          onClick={openNav}
+        >
+          &#9776;
         </div>
+
       </div>
     </NavBarStyle>
   )

@@ -4,8 +4,17 @@ export const NavBarStyle = styled.header`
   width: 100%;
   background: #bea2a241;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 100px;
+
   text-transform: uppercase;
   font-size: 18px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   font-family:
     gt,
@@ -23,7 +32,6 @@ export const NavBarStyle = styled.header`
   .header__content {
     width: 100%;
     padding: 1rem 3rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,40 +46,28 @@ export const NavBarStyle = styled.header`
     cursor: pointer;
   }
 
-  .header__logo-img-cont {
-    width: 40px;
-    height: 40px;
-    background: #eee;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-
-  .header__logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   .header__main {
     display: flex;
-    align-items: center;
+    margin-left: auto;
+    alignItems: 'flex-end';
   }
 
   .header__links {
     display: flex;
     gap: 2rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .header__links li {
-    list-style: none;
+    width: 120px;
+    text-align: center;
   }
 
   .header__links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    transition: 0.3s;
+    display: block;
+    width: 100%;
   }
 
   .header__links a:hover {

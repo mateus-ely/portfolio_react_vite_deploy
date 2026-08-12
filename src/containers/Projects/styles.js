@@ -13,6 +13,7 @@ export const ProjectsStyle = styled.section`
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
+     min-height: 100vh;
 
   /* ===== PARTE SUPERIOR ===== */
   .projects-top {

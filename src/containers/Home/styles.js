@@ -5,6 +5,7 @@ export const HomeStyle = styled.section`
   padding-left: 50px;
   padding-right: 50px;
   /* Exemplo de aplicação no título do Hero */
+   min-height: 900px;
 
   .home-title {
     font-family: 'Tan-Pearl', serif;
@@ -28,7 +29,6 @@ export const HomeStyle = styled.section`
   .home-left p {
    font-weight: 400;
    line-height: 1.8;
-   color: #444;
   }
   
   .home-right{

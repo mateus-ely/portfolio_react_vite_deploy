@@ -9,34 +9,41 @@ import AboutComp from './containers/About/index'
 import ProjectsComp from './containers/Projects/index'
 import ContactComp from './containers/Contact/index'
 
+
 const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <HomeComp />,
-    },
-    {
-      path: 'About',
-      element: <AboutComp />,
-    },
-    {
-      path: 'Projects',
-      element: <ProjectsComp />,
-    },
-    {
-      path: 'Contact',
-      element: <ContactComp />,
+      element: (
+        <>
+          <section id="home">
+            <HomeComp />
+          </section>
+
+          <section id="about">
+            <AboutComp />
+          </section>
+
+          <section id="projects">
+            <ProjectsComp />
+          </section>
+
+          <section id="contact">
+            <ContactComp />
+          </section>
+        </>
+      ),
     },
   ],
   {
-    // O nome do seu repositório é o prefixo da URL no GitHub Pages
     basename: import.meta.env.BASE_URL,
   },
 )
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <MyGlobalStyles />
-        <RouterProvider router={router} /> {' '}
+    <RouterProvider router={router} />
   </StrictMode>,
 )
